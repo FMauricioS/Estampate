@@ -3,8 +3,8 @@
 == Diagrama general de casos de uso
 http://orig15.deviantart.net/02ee/f/2015/281/e/9/diagramageneral_cu_estampate_by_fmauricios-d9cetv0.png
 
-Integrante | Rol
----------- | ------------
-Yesid Botero | Programador
-Miguel Ángel Rodas | Diseñador y programador
-Mauricio Serna Flórez (@fmauricios) | Programador
+#### Integrantes
+
+* Miguel Ángel Rodas
+* Yesid Botero
+* Mauricio Serna Flórez (@fmauricios)
