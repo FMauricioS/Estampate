@@ -3,10 +3,41 @@
 <head>
   <title>Estampate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.light_blue-indigo.min.css" /> 
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Estampate</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Catalogo</a>
+        <a class="mdl-navigation__link" href="">Iniciar sesión</a>
+        <a class="mdl-navigation__link" href="">Registrarse</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Estampate</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Catalogo</a>
+      <a class="mdl-navigation__link" href="">Iniciar sesión</a>
+      <a class="mdl-navigation__link" href="">Registrarse</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+  </main>
+</div>
 
 <%= yield %>
 
