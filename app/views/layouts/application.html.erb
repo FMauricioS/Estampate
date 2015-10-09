@@ -9,35 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
-<div class="demo-layout-transparent mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Estampate</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Catalogo</a>
-        <%= link_to("Iniciar sesión", new_user_session_path , :class => 'mdl-navigation__link') %>
-        <!-- <a class="mdl-navigation__link" href="#">Iniciar sesión</a> -->
-        <a class="mdl-navigation__link" href="#">Registrarse</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Estampate</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Catalogo</a>
-      <a class="mdl-navigation__link" href="#">Iniciar sesión</a>
-      <a class="mdl-navigation__link" href="#">Registrarse</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-  </main>
-</div>
+
+<% if user_signed_in? %>
+	<%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
+<% else %>
+	<%= link_to("Iniciar sesión", new_user_session_path) %>      
+  <%= link_to("Registrarse", new_user_registration_path) %>      
+<% end %>
+
 
 <%= yield %>
 
