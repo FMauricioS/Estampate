@@ -17,10 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   template: template0
-  
   pool: 5
 
 development:
