@@ -14,4 +14,11 @@
 
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.nav
+//= require jquery.sticky
+//= require bootstrap.min.js
+//= require plugins
+//= require wow.min
+//= require main
 //= require_tree .
+

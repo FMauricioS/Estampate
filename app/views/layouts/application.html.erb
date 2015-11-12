@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
   <title>Estampate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-
-
-<% if user_signed_in? %>
+<!-- <% if user_signed_in? %>
 	<%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
 	<%= link_to("Editar perfil", edit_user_registration_path) %>
 <% else %>
 	<%= link_to("Iniciar sesión", new_user_session_path) %>      
   <%= link_to("Registrarse", new_user_registration_path) %>      
-<% end %>
+<% end %> -->
 
 
 <%= yield %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shirts
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { registrations: 'registrations' }
   # The priority is based upon order of creation: first created -> highest priority.

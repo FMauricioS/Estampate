@@ -6,6 +6,7 @@ class ApplicationPolicy
     @record = record
   end
 
+  # Método pertenece a un método index en un controlador
   def index?
     false
   end
