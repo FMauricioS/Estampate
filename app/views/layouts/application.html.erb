@@ -12,17 +12,75 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <section id="hero-area">
+    <%= image_tag("header1.jpg", :class => 'img-responsive') %>
+  </section>
+  <!--
+    Header start 
+  ============================== -->
+  <nav id="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                    <h1> Estampate </h1>
+                  </a>
+                </div>
 
-<!-- <% if user_signed_in? %>
-	<%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
-	<%= link_to("Editar perfil", edit_user_registration_path) %>
-<% else %>
-	<%= link_to("Iniciar sesión", new_user_session_path) %>      
-  <%= link_to("Registrarse", new_user_registration_path) %>      
-<% end %> -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right" id="top-nav">
+                    <li><a href="#hero-area">Incio</a></li>
+                    <li><a href="#about-us">Acerca de nosotros</a></li>
+                    <!-- <li><a href="#blog">Registrate</a></li>
+                    <li><a href="#blog">Iniciar Sesión</a></li> -->
 
+                    <% if user_signed_in? %>
+                      <%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
+                    <% else %>
+                      <li>
+                        <%= link_to("Iniciar sesión", new_user_session_path) %>      
+                      </li>
+                      <li>
+                        <%= link_to("Registrarse", new_user_registration_path) %>      
+                      </li>
+                    <% end %>
+
+                    <li><a href="#contact-us">Contactanos</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div><!-- .col-md-12 close -->
+      </div><!-- .row close -->
+    </div><!-- .container close -->
+  </nav><!-- header close -->
 
 <%= yield %>
 
+<!-- footer-bottom  start
+    ============================= -->
+    <footer id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="block">
+                        <p>Copyright &copy; 2015 - Todos los derechos reservados. Diseñado y desarrollado por <a href="http://www.mauricioserna.com" target="_BLANK">MOM</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
