@@ -25,6 +25,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.3.3'
