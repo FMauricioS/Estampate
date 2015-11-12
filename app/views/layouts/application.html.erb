@@ -46,7 +46,9 @@
                     <li><a href="#blog">Iniciar Sesión</a></li> -->
 
                     <% if user_signed_in? %>
-                      <%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
+                      <li>
+                        <%= link_to("Cerrar sesión", destroy_user_session_path, :method => :delete) %>
+                      </li>
                     <% else %>
                       <li>
                         <%= link_to("Iniciar sesión", new_user_session_path) %>      
@@ -72,15 +74,15 @@
 <!-- footer-bottom  start
     ============================= -->
     <footer id="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="block">
-                        <p>Copyright &copy; 2015 - Todos los derechos reservados. Diseñado y desarrollado por <a href="http://www.mauricioserna.com" target="_BLANK">MOM</a></p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="block">
+              <p>Copyright &copy; 2015 - Todos los derechos reservados. Diseñado y desarrollado por <a href="http://www.mauricioserna.com" target="_BLANK">MOM</a></p>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 </body>
 </html>
