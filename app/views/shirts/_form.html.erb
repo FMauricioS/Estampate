@@ -15,10 +15,11 @@
     <%= f.input :price %>
     <%= f.input :quantity %>
     <%= f.input :description %>
-    <%= f.input :photo %>
-    <%= f.button :submit %>
-    
- 
-  </div>  
+    <%= f.label :photo %>
+    <%= f.file_field :photo %></br>
 
+    <div class="form-group">
+      <%= f.button :submit %>
+    </div>
+  </div>  
 <% end %>
