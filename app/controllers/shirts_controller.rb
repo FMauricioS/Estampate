@@ -5,6 +5,7 @@ class ShirtsController < ApplicationController
   # GET /shirts.json
   def index
     @shirts = Shirt.all
+    @categories = Category.all
   end
 
   # GET /shirts/1
