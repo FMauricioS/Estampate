@@ -4,14 +4,18 @@ ruby '2.2.3'
 
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
+gem 'font-awesome-rails', '~> 4.4'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'pg'
 gem 'puma'
 gem 'pundit'
 gem 'rails', '4.2.4'
 gem 'rails_admin', '~> 0.7.0'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'simple_form'
+gem 'sprockets-rails', '~> 2.3', '>= 2.3.3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
@@ -26,7 +30,6 @@ gem 'uglifier', '>= 1.3.0'
 
 group :production do
 	gem 'rails_12factor'
-	gem 'pg'
 end
 
 group :development, :test do
@@ -37,6 +40,5 @@ end
 group :development do
 	gem 'pry-rails'
   gem 'spring'
-  gem 'pg'
   gem 'web-console', '~> 2.0'
 end

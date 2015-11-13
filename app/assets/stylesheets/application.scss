@@ -11,11 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
- *= require owl.carousel
+ *= require bootstrap
  *= require bootstrap.min
- *= require font-awesome
- *= require animate.min
- *= require main
- *= require responsive
+ *= require landing-page
+ *= require_self
  */
+
+ .padding-nav {
+ 	margin-top: 80px;
+ }

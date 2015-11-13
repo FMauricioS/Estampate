@@ -1,8 +1,7 @@
-<%= form_for(@shirt) do |f| %>
+<%= simple_form_for(@shirt, html: { class: 'form-vertical' }) do |f| %>
   <% if @shirt.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shirt.errors.count, "error") %> prohibited this shirt from being saved:</h2>
-
       <ul>
       <% @shirt.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,27 +10,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="container">
+    <%= f.input :size %>
+    <%= f.input :price %>
+    <%= f.input :quantity %>
+    <%= f.input :description %>
+    <%= f.input :photo %>
+    <%= f.button :submit %>
+    
+ 
+  </div>  
+
 <% end %>
