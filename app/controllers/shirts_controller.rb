@@ -26,6 +26,8 @@ class ShirtsController < ApplicationController
   # POST /shirts.json
   def create
     @shirt = Shirt.new(shirt_params)
+    @shirt.categories << @categories
+    @shirt.save
 
     respond_to do |format|
       if @shirt.save
