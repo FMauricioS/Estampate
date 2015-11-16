@@ -39,6 +39,7 @@ group :development, :test do
 end
 
 group :development do
+	gem 'awesome_print'
 	gem 'pry-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
