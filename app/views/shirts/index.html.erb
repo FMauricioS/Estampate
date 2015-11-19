@@ -1,7 +1,25 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
-<h1 class="padding-nav"><%= t '.Listado de camisetas' %></h1>
+
+  <h1 class="padding-nav text-center"><%= t '.Listado de camisetas' %></h1>
+
   <% @shirts.each do |shirt| %>
-    <%= image_tag(shirt.photo) %> <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">            
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Thumbnail Headline</h4>
+              <p> <%= shirt.description %> </p>
+              <p>
+                <a href="" class="label label-danger" rel="tooltip" title="Talla"><%= shirt.size %></a>
+                <a href="" class="label label-default" rel="tooltip" title="Precio"><%= shirt.price %></a>
+                <a href="" class="label label-default" rel="tooltip" title="Comprar ahora">Comprar</a>
+              </p>
+            </div>
+            <%= image_tag(shirt.photo, height: '320', width: '320', class: 'img-responsive img-thumbnail') %>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
-</div>
+
