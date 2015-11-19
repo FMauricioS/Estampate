@@ -1,4 +1,4 @@
 class CategoryShirt < ActiveRecord::Base
-	belongs_to :shirt
-	belongs_to :category
+  belongs_to :shirt
+  belongs_to :category
 end

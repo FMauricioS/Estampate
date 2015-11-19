@@ -2,10 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
-gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'font-awesome-rails', '~> 4.4'
-gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'pg'
@@ -14,33 +12,21 @@ gem 'pundit'
 gem 'rails', '4.2.4'
 gem 'rails_admin', '~> 0.7.0'
 gem 'sass-rails', '~> 5.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'sprockets-rails', '~> 2.3', '>= 2.3.3'
-gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :production do
-	gem 'rails_12factor'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.3.3'
 end
 
 group :development do
-	gem 'awesome_print'
-	gem 'pry-rails'
+  gem 'awesome_print'
+  gem 'pry-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
