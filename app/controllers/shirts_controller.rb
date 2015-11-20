@@ -56,7 +56,7 @@ class ShirtsController < ApplicationController
     @shirt.destroy
     respond_to do |format|
       format.html { redirect_to shirts_url, notice: 'Shirt was successfully destroyed.' }
-      format.json { head :no_content }
+
     end
   end
 
