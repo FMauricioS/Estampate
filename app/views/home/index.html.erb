@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag @shirts.first.photo, class: 'img-responsive' %>
+        <%= image_tag @shirts.try(:first).try(:photo), class: 'img-responsive' %>
       </div>
     </div>
   </div>
