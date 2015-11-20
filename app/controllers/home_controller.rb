@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
-		# @shirt = Shirt.all
+		# @shirts = Shirt.all
+		@shirts = Shirt.order("RANDOM()").limit(2)
 	end
 end
