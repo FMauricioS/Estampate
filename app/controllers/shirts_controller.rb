@@ -2,14 +2,12 @@ class ShirtsController < ApplicationController
   before_action :set_shirt, only: [:show, :edit, :update, :destroy]
 
   # GET /shirts
-  # GET /shirts.json
   def index
     @shirts = Shirt.all
     @categories = Category.all
   end
 
   # GET /shirts/1
-  # GET /shirts/1.json
   def show
   end
 
@@ -23,7 +21,6 @@ class ShirtsController < ApplicationController
   end
 
   # POST /shirts
-  # POST /shirts.json
   def create
     @shirt = Shirt.new(shirt_params)
     @shirt.categories << @categories
@@ -39,7 +36,6 @@ class ShirtsController < ApplicationController
   end
 
   # PATCH/PUT /shirts/1
-  # PATCH/PUT /shirts/1.json
   def update
     respond_to do |format|
       if @shirt.update(shirt_params)
@@ -51,23 +47,21 @@ class ShirtsController < ApplicationController
   end
 
   # DELETE /shirts/1
-  # DELETE /shirts/1.json
   def destroy
     @shirt.destroy
     respond_to do |format|
       format.html { redirect_to shirts_url, notice: 'Shirt was successfully destroyed.' }
-
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_shirt
-      @shirt = Shirt.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_shirt
+    @shirt = Shirt.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def shirt_params
-      params.require(:shirt).permit(:size, :price, :quantity, :description, :photo)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def shirt_params
+    params.require(:shirt).permit(:size, :price, :quantity, :description, :photo)
+  end
 end
