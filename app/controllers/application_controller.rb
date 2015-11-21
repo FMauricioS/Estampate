@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include Pundit
   protect_from_forgery with: :exception
+
   before_filter :configure_devise_params, if: :devise_controller?
 
   def configure_devise_params
@@ -12,5 +13,4 @@ class ApplicationController < ActionController::Base
       e.permit(:email, :password, :password_confirmation, :current_password, :name, :last_name, :nickname, :address, :telephone, :personal_telephone)
     end
   end
-
 end
