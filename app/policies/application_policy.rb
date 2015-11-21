@@ -1,9 +1,9 @@
 class ApplicationPolicy
-  attr_reader :user, :record
+  attr_reader :user, :shirt
 
-  def initialize(user, record)
+  def initialize(user, shirt)
     @user = user
-    @record = record
+    @shirt = shirt
   end
 
   # Método pertenece a un método index en un controlador
@@ -12,7 +12,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(:id => shirt.id).exists?
   end
 
   def create?
@@ -36,7 +36,7 @@ class ApplicationPolicy
   end
 
   def scope
-    Pundit.policy_scope!(user, record.class)
+    Pundit.policy_scope!(user, shirt.class)
   end
 
   class Scope
