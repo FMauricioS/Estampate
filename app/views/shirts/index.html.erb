@@ -12,12 +12,12 @@
             <div class="panel-image hide-panel-body">
               <%= link_to (image_tag shirt.photo, class: 'panel-image-preview'), shirt_path(shirt) %>
             </div>
-            <div class="panel-body">
+            <div class="panel-body text-center">
               <p><%= shirt.description %> </p>
             </div>
             <div class="panel-footer text-center">
               <span>
-                <i class="fa fa-money"></i> Price <%= shirt.price %>
+                <i class="fa fa-money"></i> Price <%= number_to_currency shirt.price %>
               </span>
            </div>
             <%= link_to "Comprar", shirt_path(shirt), class: "btn btn-block btn-primary"%>
