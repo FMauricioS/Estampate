@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119173902) do
+ActiveRecord::Schema.define(version: 20151122234309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -37,12 +38,12 @@ ActiveRecord::Schema.define(version: 20151119173902) do
   end
 
   create_table "shirts", force: :cascade do |t|
-    t.string   "size"
+    t.string   "size",               default: [],              array: true
     t.decimal  "price"
-    t.integer  "quantity"
+    t.integer  "quantity",           default: [],              array: true
     t.text     "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
