@@ -7,4 +7,14 @@ class Shirt < ActiveRecord::Base
   # has_many :category_shirts
   # has_many :categories, :through => :category_shirts
   has_and_belongs_to_many :categories
+
+  accepts_nested_attributes_for :categories, reject_if: :all_blank, allow_destroy: true
+
+  def size_text
+    self.size.join(', ')
+  end
+
+  def size_text=(value)
+    self.size = value.split(',').map{ |size| size.strip }
+  end
 end
