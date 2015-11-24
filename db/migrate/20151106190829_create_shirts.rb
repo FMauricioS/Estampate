@@ -3,7 +3,7 @@ class CreateShirts < ActiveRecord::Migration
     create_table :shirts do |t|
       t.string :size, array: true, default: []
       t.decimal :price
-      t.integer :quantity, array: true, default: []
+      t.integer :quantity
       t.text :description
       t.string :photo
 

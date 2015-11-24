@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20151123140343) do
   create_table "shirts", force: :cascade do |t|
     t.string   "size",               default: [],              array: true
     t.decimal  "price"
-    t.integer  "quantity",           default: [],              array: true
+    t.integer  "quantity"
     t.text     "description"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false

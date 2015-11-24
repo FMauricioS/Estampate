@@ -60,8 +60,7 @@ class ShirtsController < ApplicationController
     @shirt = Shirt.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def shirt_params
-    params.require(:shirt).permit(:size, :price, :quantity, :description, :photo, categories_attributes: [:id, :name, :_destroy])
+    params.require(:shirt).permit!({:size => []}, :price, :quantity, :description, :photo, :title)
   end
 end
