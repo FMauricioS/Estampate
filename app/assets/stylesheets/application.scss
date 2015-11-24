@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require bootstrap
  *= require font-awesome
  *= require bootstrap.min
@@ -47,7 +46,7 @@
 }
 
 .panel-image {
-    position: relative;   
+    position: relative;
 }
 .panel-image img.panel-image-preview {
     width: 100%;
