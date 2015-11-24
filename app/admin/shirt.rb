@@ -1,5 +1,5 @@
 ActiveAdmin.register Shirt do
-  permit_params :description, :photo, :price, :quantity, { :size => [] }, :title
+  permit_params :description, :photo, :price, :quantity, :sizes_text, :title
 
   form do |f|
     f.inputs "Shirt details" do
@@ -7,7 +7,7 @@ ActiveAdmin.register Shirt do
       f.input :description
       f.input :price
       f.input :quantity
-      f.input :size
+      f.input :sizes_text
       f.input :photo, :as => :file
       f.has_many :categories do |category|
         category.input :name, :collection => Category.all.map{ |cat| [cat.name, cat.id] }

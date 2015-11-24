@@ -60,6 +60,6 @@ class ShirtsController < ApplicationController
   end
 
   def shirt_params
-    params.require(:shirt).permit({ :size => [] }, :price, :quantity, :description, :photo, :title)
+    params.require(:shirt).permit(:price, :quantity, :description, :photo, :title, :sizes_text)
   end
 end
