@@ -4,7 +4,6 @@ class ShirtsController < ApplicationController
   # GET /shirts
   def index
     @shirts = Shirt.all
-#    @categories = Categories.all
   end
 
   # GET /shirts/1

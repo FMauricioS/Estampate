@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_admin_user!, :only[:edit, :update, :destroy, :create]
+  before_action :authenticate_admin_user!, only: [:edit, :update, :destroy, :create]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
@@ -24,8 +24,8 @@ class CategoriesController < ApplicationController
   # POST /categories
   def create
     @category = Category.new(category_params)
-    @category.shirts << @shirts
-    @category.save!
+    # @category.shirts << @shirts
+    # @category.save!
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }

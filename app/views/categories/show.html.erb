@@ -4,8 +4,9 @@
 <p>
   <strong>Name:</strong>
   <%= @category.name %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+  <%= @category.shirts %>
+  <% @category.shirts.each do |s| %>
+    <%= s.title %>
+  <% end %>
+  </p>
 </div>

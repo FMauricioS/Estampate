@@ -7,7 +7,7 @@ class Shirt < ActiveRecord::Base
 
   has_many :categorizations
   has_many :categories, :through => :categorizations
-  # has_and_belongs_to_many :categories
+
   accepts_nested_attributes_for :categories, reject_if: :all_blank, allow_destroy: true
 
   def set_categories=(value)
