@@ -12,21 +12,8 @@
 //
 //= require jquery_ujs
 //= require bootstrap
-//= require jquery
 //= require cocoon
+//= require jquery
 //= require bootstrap.min
 //= require_tree
-
-$(document).ready(function() {
-  $("[rel='tooltip']").tooltip();
-
-  $('.thumbnail').hover(
-    function(){
-      $(this).find('.caption').slideDown(250); //.fadeIn(250)
-    },
-    function(){
-      $(this).find('.caption').slideUp(250); //.fadeOut(205)
-    }
-  ); 
-});
 
