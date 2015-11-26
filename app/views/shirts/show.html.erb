@@ -4,18 +4,8 @@
   <div class="container" style="margin-top:10px;">
     <div class="row form-group text-center">
       <div class="col-xs-12 col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title text-center"><%= @shirt.title %> </h3>
-          </div>
-          <div class="panel-image hide-panel-body">
-            <%= link_to (image_tag @shirt.photo, class: 'panel-image-preview center-block') %>
-          </div>
-          <div class="panel-body text-center">
-            <p><%= @shirt.description %> </p>
-          </div>
+        <%= link_to (image_tag @shirt.photo, class: 'panel-image-preview center-block') %>
       </div>
-    </div>
     <div class="media-body">
       </br></br></br>
       <p> <%= @shirt.title %></p>
@@ -25,7 +15,7 @@
       <p> Precio: <%= number_to_currency @shirt.price %></p>
       <p> Descripción: <%= @shirt.description %></p>
       Seleccione cantidad: <%= select_tag "quantity",options_for_select((1..@shirt.quantity)) %> </br> </br>
-     
+      </br></br>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="4YXX5ME3SDFMJ">
