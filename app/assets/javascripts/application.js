@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery
 //= require cocoon
 //= require bootstrap.min
-//= require_tree 
+//= require_tree
 
 $(document).ready(function() {
   $("[rel='tooltip']").tooltip();

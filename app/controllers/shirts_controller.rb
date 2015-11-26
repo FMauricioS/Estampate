@@ -1,10 +1,10 @@
 class ShirtsController < ApplicationController
+  before_action :authenticate_admin_user!, only: [:create, :destroy, :update, :edit]
   before_action :set_shirt, only: [:show, :edit, :update, :destroy]
-
   # GET /shirts
   def index
     @shirts = Shirt.all
-    @categories = Category.all
+#    @categories = Categories.all
   end
 
   # GET /shirts/1
@@ -23,9 +23,6 @@ class ShirtsController < ApplicationController
   # POST /shirts
   def create
     @shirt = Shirt.new(shirt_params)
-    @shirt.categories << @categories
-    @shirt.save
-
     respond_to do |format|
       if @shirt.save
         format.html { redirect_to @shirt, notice: 'Shirt was successfully created.' }
@@ -60,6 +57,6 @@ class ShirtsController < ApplicationController
   end
 
   def shirt_params
-    params.require(:shirt).permit(:price, :quantity, :description, :photo, :title, :sizes_text)
+    params.require(:shirt).permit(:price, :quantity, :description, :photo, :title, :sizes_text, categories_attributes: [:name])
   end
 end

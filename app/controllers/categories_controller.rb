@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :authenticate_admin_user!, :only[:edit, :update, :destroy, :create]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
   def index
     @categories = Category.all
+    @shirts     = Shirt.all
   end
 
   # GET /categories/1
@@ -23,7 +24,8 @@ class CategoriesController < ApplicationController
   # POST /categories
   def create
     @category = Category.new(category_params)
-
+    @category.shirts << @shirts
+    @category.save!
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
@@ -60,6 +62,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, shirts_attributes: [:price, :quantity, :description, :photo, :title, :sizes_text])
     end
 end

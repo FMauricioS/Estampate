@@ -15,16 +15,11 @@
 <div class="content-section-a">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">Si quiere seguir viendo más de nuestras camisetas <br> ¿ Que esperas ? </h2>
-        <p class="lead text-center">
-          <%= link_to "Dame click", shirts_path, { class: "btn btn-default" }  %>
-        </p>
+       <div class="col-lg-5 col-sm-6">
+        <%= link_to (image_tag @shirts.try(:last).try(:photo), class: 'img-responsive'), shirts_path %>
       </div>
       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag @shirts.try(:first).try(:photo), class: 'img-responsive' %>
+        <%= link_to (image_tag @shirts.try(:first).try(:photo), class: 'img-responsive'), shirts_path %>
       </div>
     </div>
   </div>

@@ -12,13 +12,10 @@
 
   <div class="container">
     <%= f.input :title %>
-    <%= f.input :size_text %>
+    <%= f.input :sizes_text %>
     <%= f.input :price %>
     <%= f.input :quantity %>
     <%= f.input :description %>
-    <%= f.fields_for :categories do |category| %>
-      <%= render :partial => "categories/form", :locals => {:f => category, :f_parent => f, :form_actions_visible => false, :show_features => true, :fieldset_label => 'Category Details'} %>
-    <% end -%>
     <%= f.label :photo %>
     <%= f.file_field :photo %></br>
     <div class="form-group">

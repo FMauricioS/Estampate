@@ -5,9 +5,21 @@ class Shirt < ActiveRecord::Base
   validates_presence_of(:size, :quantity, :description, :price, :title)
   validates :title, uniqueness: true
 
-  has_and_belongs_to_many :categories
-
+  has_many :categorizations
+  has_many :categories, :through => :categorizations
+  # has_and_belongs_to_many :categories
   accepts_nested_attributes_for :categories, reject_if: :all_blank, allow_destroy: true
+
+  def set_categories=(value)
+    @categories = value
+  end
+
+  def save_categories
+    @categories.each do |category_id|
+      Categorization.create!(category_id: category_id, article_id: self.id)
+    end
+  end
+
 
   def sizes_text
     self.size.join(', ')
