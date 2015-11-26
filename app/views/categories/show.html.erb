@@ -4,9 +4,10 @@
 <p>
   <strong>Name:</strong>
   <%= @category.name %>
-  <%= @category.shirts %>
-  <% @category.shirts.each do |s| %>
-    <%= s.title %>
-  <% end %>
-  </p>
+  <% @categories.each do |category| %>
+    <% category.shirts.each do |shirt| %>
+      <p> <%= image_tag shirt.photo %></p>
+    <% end -%>
+  <% end -%>
+</p>
 </div>
