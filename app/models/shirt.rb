@@ -4,6 +4,8 @@ class Shirt < ActiveRecord::Base
 
   validates_presence_of(:size, :quantity, :description, :price, :title)
   validates :title, uniqueness: true
+  validates_length_of :title, :minimum => 5, :maximum => 35
+  validates_length_of :description, :minimum => 43, :maximum => 75
 
   has_many :categorizations
   has_many :categories, :through => :categorizations
@@ -19,7 +21,6 @@ class Shirt < ActiveRecord::Base
       Categorization.create!(category_id: category_id, article_id: self.id)
     end
   end
-
 
   def sizes_text
     self.size.join(', ')

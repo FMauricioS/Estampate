@@ -1,6 +1,7 @@
 class ShirtsController < ApplicationController
-  before_action :authenticate_admin_user!, only: [:create, :destroy, :update, :edit]
-  before_action :set_shirt, only: [:show, :edit, :update, :destroy]
+   before_action :set_shirt, only: [:show, :edit, :update, :destroy]
+   before_action :authenticate_admin_user!, only: [:create, :destroy, :update, :edit, :new]
+
   # GET /shirts
   def index
     @shirts = Shirt.all
