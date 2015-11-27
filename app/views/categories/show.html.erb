@@ -6,7 +6,7 @@
     <div class="row form-group">
       <% @category.shirts.each do |shirt| %>
         <div class="col-xs-12 col-md-4">
-          <%= link_to (image_tag shirt.photo, class: 'panel-image-preview'), shirt_path(shirt) %>
+          <%= link_to (image_tag shirt.photo, class: 'panel-image-preview',height: '400', width: '360'), shirt_path(shirt) %>
           <div class="panel-footer text-center">
             <span class="text-center"> <i class="fa fa-money"></i> Price <%= number_to_currency shirt.price %> </span>
           </div>

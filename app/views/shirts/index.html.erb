@@ -10,7 +10,7 @@
               <h3 class="panel-title text-center"><%= shirt.title %> </h3>
             </div>
             <div class="panel-image hide-panel-body">
-              <%= link_to (image_tag shirt.photo, class: 'panel-image-preview'), shirt_path(shirt) %>
+              <%= link_to (image_tag shirt.photo, class: 'panel-image-preview', height: '400', width: '360'), shirt_path(shirt) %>
             </div>
             <div class="panel-body text-center">
               <p><%= shirt.description %> </p>
