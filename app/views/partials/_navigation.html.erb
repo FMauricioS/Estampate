@@ -27,11 +27,11 @@
         </li>
         <% if user_signed_in? %>
           <li>
-            <%= link_to current_user.nickname %>
+            <%= link_to current_user.nickname, edit_user_registration_path %>
           </li>
 
           <li>
-            <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+            <%= link_to "sign out", destroy_user_session_path, method: :get %>
           </li>
         <% else %>
           <li>

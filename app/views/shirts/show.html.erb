@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="padding-nav">
+<div class="padding-nav" style="margin-top:135px; margin-bottom:145px;">
   <div class="container" style="margin-top:10px;">
     <div class="row form-group text-center">
       <div class="col-xs-12 col-md-4">
@@ -8,7 +8,7 @@
       </div>
     <div class="media-body">
       </br></br></br>
-      <p> <%= @shirt.title %></p>
+      <h3> <%= @shirt.title %></h3>
       <p> <%= @shirt.description %></p>
       Talla: <%= select_tag "size", options_for_select(@shirt.size) %> </br> </br>
       <p> Cantidad disponible: <%= @shirt.quantity %>
