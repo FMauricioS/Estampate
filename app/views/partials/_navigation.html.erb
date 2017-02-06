@@ -22,7 +22,7 @@
           <ul class="dropdown-menu">
             <% @categories.each do |category| %>
               <li> <%= link_to category.name, category %> </li>
-            <% end -%>
+            <% end %>
           </ul>
         </li>
         <% if user_signed_in? %>

@@ -6,13 +6,12 @@ class ApplicationPolicy
     @shirt = shirt
   end
 
-  # Método pertenece a un método index en un controlador
   def index?
     false
   end
 
   def show?
-    scope.where(:id => shirt.id).exists?
+    scope.where(id: shirt.id).exists?
   end
 
   def create?

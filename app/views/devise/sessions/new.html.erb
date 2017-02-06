@@ -1,8 +1,6 @@
 <div class="container">
-  <h2 class="padding-nav">Log in</h2>
+  <h2 class="padding-nav text-center">Log In</h2>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-vertical' }) do |f| %>
-    
-
     <%= f.input :email %><br />
     <%= f.input :password %><br />
 
@@ -11,7 +9,7 @@
          <%= f.input_field :remember_me, as: :boolean, boolean_style: :inline %>
     <% end -%>
     <div class="form-group">
-      <%= f.button :submit %>
+      <%= f.button :submit, class: "btn btn-primary" %>
     </div>
   <% end %>
 

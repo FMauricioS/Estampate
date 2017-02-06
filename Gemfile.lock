@@ -207,7 +207,8 @@ GEM
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slop (3.6.0)
-    spring (1.4.4)
+    spring (2.0.1)
+      activesupport (>= 4.2)
     sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
@@ -263,5 +264,8 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
+RUBY VERSION
+   ruby 2.3.3p222
+
 BUNDLED WITH
-   1.10.6
+   1.14.2

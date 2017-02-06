@@ -21,18 +21,16 @@ class CategoriesController < ApplicationController
   end
 
   # POST /categories
-  def create
-    @category = Category.new(category_params)
-    # @category.shirts << @shirts
-    # @category.save!
-    respond_to do |format|
-      if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-      else
-        format.html { render :new }
-      end
-    end
-  end
+  # def create
+  #   @category = Category.new(category_params)
+  #   respond_to do |format|
+  #     if @category.save
+  #       format.html { redirect_to @category, notice: 'Category was successfully created.' }
+  #     else
+  #       format.html { render :new }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /categories/1
   def update
